@@ -3,9 +3,9 @@ package com.basaki;
 public class MatrixSearch {
 
     public static boolean search(int[][] values,
-                                 final int rows,
-                                 final int cols,
-                                 int x) {
+            final int rows,
+            final int cols,
+            int x) {
         int m = 0;
         int n = cols - 1;
 

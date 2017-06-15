@@ -1,13 +1,7 @@
 package com.basaki;
 
-//import static java.lang.*;
 
 public class TestClass {
-
-    //const int a;
-    public TestClass() {
-        // TODO Auto-generated constructor stub
-    }
 
     public static void main(String[] args) {
         System.out.println("88888888888");
@@ -23,8 +17,10 @@ public class TestClass {
         switch (x) {
             case 5:
                 System.out.println("*****");
+                break;
             default:
                 System.out.println("*****");
+                break;
             case 3:
         }
 

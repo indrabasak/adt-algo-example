@@ -1,5 +1,6 @@
 package com.basaki.ifc;
 
+@SuppressWarnings({"squid:S106"})
 public class TestShape {
 
     public static void main(String[] args) {

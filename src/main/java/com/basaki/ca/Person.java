@@ -16,7 +16,8 @@ public class Person {
 
     public Person(String name, String address) {
         if (name == null || name.length() == 0)
-            throw new IllegalArgumentException("Person needs a non-null and non-blank name");
+            throw new IllegalArgumentException(
+                    "Person needs a non-null and non-blank name");
 
         if (address == null || address.length() == 0)
             throw new IllegalArgumentException(

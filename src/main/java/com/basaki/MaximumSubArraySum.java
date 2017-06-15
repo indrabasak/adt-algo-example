@@ -6,12 +6,12 @@ public class MaximumSubArraySum {
         int[] val1 = {1, 2, -5, 4, 7, -2};
         int[] val2 = {1, 5, -3, 4};
         MaximumSubArraySum msub = new MaximumSubArraySum();
-//        System.out.println(msub.maxSum(val1));
-//        System.out.println(msub.maxSum(val2));
-//
+        //        System.out.println(msub.maxSum(val1));
+        //        System.out.println(msub.maxSum(val2));
+        //
         msub.maxSum1(val1);
         msub.maxSum1(val2);
-//
+        //
 
         msub.maxSum2(val1);
         msub.maxSum2(val2);

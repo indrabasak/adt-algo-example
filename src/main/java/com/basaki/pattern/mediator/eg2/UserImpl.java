@@ -1,5 +1,6 @@
 package com.basaki.pattern.mediator.eg2;
 
+@SuppressWarnings({"squid:S106"})
 public class UserImpl
         extends User {
 

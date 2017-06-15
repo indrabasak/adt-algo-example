@@ -11,8 +11,10 @@ public class ReverseWords {
         String str2 = "I     want     to     play";
         //System.out.println("reverse of " + str2 + " is -> " + rw.reverse(str2));
 
-        System.out.println("* reverse of " + str1 + " is -> " + rw.reverse2(str1));
-        System.out.println("* reverse of " + str2 + " is -> " + rw.reverse2(str2));
+        System.out.println(
+                "* reverse of " + str1 + " is -> " + rw.reverse2(str1));
+        System.out.println(
+                "* reverse of " + str2 + " is -> " + rw.reverse2(str2));
 
     }
 
@@ -42,18 +44,18 @@ public class ReverseWords {
         }
 
         char[] letters = str.toCharArray();
-//        for (int i = 0; i < letters.length; i++)
-//        {
-//            System.out.print(letters[i]);
-//        }
+        //        for (int i = 0; i < letters.length; i++)
+        //        {
+        //            System.out.print(letters[i]);
+        //        }
         System.out.println();
         for (int i = 0; i < letters.length / 2; i++) {
             swap(letters, i, letters.length - 1 - i);
         }
-//        for (int i = 0; i < letters.length; i++)
-//        {
-//            System.out.print(letters[i]);
-//        }
+        //        for (int i = 0; i < letters.length; i++)
+        //        {
+        //            System.out.print(letters[i]);
+        //        }
 
         ArrayList<Character> list = new ArrayList<Character>();
         String revStr = "";

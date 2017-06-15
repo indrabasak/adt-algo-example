@@ -2,9 +2,8 @@ package com.basaki.pattern.chainofcmd;
 
 public class TestChainOfCmd {
 
-    public TestChainOfCmd() {
-        // TODO Auto-generated constructor stub
-    }
+
+    public static final String NEGATIVE_VALUE = "Negative Value ";
 
     public static void main(String[] args) {
         // Setup Chain of Responsibility
@@ -15,11 +14,11 @@ public class TestChainOfCmd {
         h2.setSuccessor(h3);
 
         // Send requests to the chain
-        h1.handleRequest(new Request(-1, "Negative Value "));
-        h1.handleRequest(new Request(0, "Negative Value "));
-        h1.handleRequest(new Request(1, "Negative Value "));
-        h1.handleRequest(new Request(2, "Negative Value "));
-        h1.handleRequest(new Request(3, "Negative Value "));
+        h1.handleRequest(new Request(-1, NEGATIVE_VALUE));
+        h1.handleRequest(new Request(0, NEGATIVE_VALUE));
+        h1.handleRequest(new Request(1, NEGATIVE_VALUE));
+        h1.handleRequest(new Request(2, NEGATIVE_VALUE));
+        h1.handleRequest(new Request(3, NEGATIVE_VALUE));
 
     }
 

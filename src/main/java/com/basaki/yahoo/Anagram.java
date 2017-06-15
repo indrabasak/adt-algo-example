@@ -1,5 +1,6 @@
 package com.basaki.yahoo;
 
+@SuppressWarnings({"squid:S1610", "squid:S106", "squid:S3776", "squid:S1226"})
 public class Anagram {
 
     public static String findAnagram(String haystack, String needle) {

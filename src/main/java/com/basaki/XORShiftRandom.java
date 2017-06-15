@@ -36,10 +36,6 @@ public class XORShiftRandom {
         this.last = seed;
     }
 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-
-    }
 
     public int nextInt(int max) {
         // left shift 21 and XOR

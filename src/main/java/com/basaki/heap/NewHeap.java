@@ -26,7 +26,8 @@ public class NewHeap<AnyType extends Comparable<AnyType>> {
         size = array.length;
         heap = (AnyType[]) new Comparable[array.length + 1];
 
-        System.arraycopy(array, 0, heap, 1, array.length);//we do not use 0 index
+        System.arraycopy(array, 0, heap, 1,
+                array.length);//we do not use 0 index
 
         buildHeap();
     }

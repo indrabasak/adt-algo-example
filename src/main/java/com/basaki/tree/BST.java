@@ -14,11 +14,6 @@ import java.util.Stack;
 public class BST<T extends Comparable<T>> implements Iterable<T> {
     private Node<T> fRoot;
 
-    /**
-     *
-     */
-    public BST() {
-    }
 
     public static void main(String[] args) {
         Integer[] a =

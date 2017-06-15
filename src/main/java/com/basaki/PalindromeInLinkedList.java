@@ -2,7 +2,6 @@ package com.basaki;
 
 import com.basaki.list.LinkedList;
 import com.basaki.list.Node;
-
 import java.util.Stack;
 
 public class PalindromeInLinkedList {

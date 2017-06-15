@@ -19,17 +19,21 @@ public class Fibonacci {
         System.out.println("Slow fibonacci of 99: " + fib.fibRecursive(6));
         System.out.println("End: Slow -------------------------------");
         System.out
-                .println("Start: Tabilation Bottom Up -------------------------------");
+                .println(
+                        "Start: Tabilation Bottom Up -------------------------------");
         System.out.println("Fast fibonacci of 82: "
                 + fib.fibTabulationBottomUp(82));
         System.out
-                .println("End: Tabilation Bottom Up -------------------------------");
+                .println(
+                        "End: Tabilation Bottom Up -------------------------------");
         System.out
-                .println("Start: Tabilation Memoization Top Down -------------------------------");
+                .println(
+                        "Start: Tabilation Memoization Top Down -------------------------------");
         System.out.println("Fast fibonacci of 82: "
                 + fib.fibMemoizationTopDown(82));
         System.out
-                .println("End: MemoizationTopDown -------------------------------");
+                .println(
+                        "End: MemoizationTopDown -------------------------------");
 
         System.out.println("Sum of fibonacci upto 3: " + fib.fibSum(3));
     }

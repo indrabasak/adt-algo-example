@@ -2,6 +2,7 @@ package com.basaki;
 
 import java.util.ArrayList;
 
+@SuppressWarnings({"squid:S106"})
 public class WordSearchInMatrix {
 
     public static int search(char[][] matrix, char[] textToFind) {

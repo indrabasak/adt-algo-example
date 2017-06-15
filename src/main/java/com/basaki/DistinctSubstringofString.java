@@ -9,10 +9,10 @@ public class DistinctSubstringofString {
         String input = "abcdqp";
         DistinctSubstringofString d = new DistinctSubstringofString();
         String[] strs = d.getSubStrings1(input);
-//        for (String s : strs)
-//        {
-//            System.out.println(s);
-//        }
+        //        for (String s : strs)
+        //        {
+        //            System.out.println(s);
+        //        }
 
     }
 

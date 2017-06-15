@@ -4,7 +4,8 @@ import java.util.Stack;
 
 public class CalculateInfixNotation {
 
-    private static Integer execute(final Operator opr, final int b, final int a) {
+    private static Integer execute(final Operator opr, final int b,
+            final int a) {
         System.out.println("&&&&& " + a + b + opr.getSign());
         switch (opr) {
             case addition:

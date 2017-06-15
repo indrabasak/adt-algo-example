@@ -166,7 +166,8 @@ public class MyStripedMap<K, V> {
                         // Reuse trailing consecutive sequence at same slot
                         Node<K, V> lastRun = head;
                         int lastIdx = idx;
-                        for (Node<K, V> last = next; last != null; last = last.next) {
+                        for (Node<K, V> last = next; last != null;
+                             last = last.next) {
                             int k = last.hash & sizeMask;
                             if (k != lastIdx) {
                                 lastIdx = k;

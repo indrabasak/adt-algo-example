@@ -33,7 +33,8 @@ public class SearchForPattern {
      * The BFSA has the following characteristics:
      * <ol>
      * <li>The pattern is not pre-processed.</li>
-     * <li>The algorithm compares from left to right character by character.</li>
+     * <li>The algorithm compares from left to right character by
+     * character.</li>
      * <li>The worst time efficiency is Θ(mn) comparisons.</li>
      * <li>The algorithm returns the first occurrence of the pattern.</li>
      * </ol>

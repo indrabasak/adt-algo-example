@@ -126,11 +126,13 @@ public class HeapSort<T extends Comparable<T>> {
         for (; 2 * k < size; k = child) {
             child = 2 * k;
 
-            if (child < size && child != size && data[child].compareTo(data[child + 1]) > 0) {
+            if (child < size && child != size && data[child].compareTo(
+                    data[child + 1]) > 0) {
                 child++;
             }
 
-            if (child < size && child != size && tmp.compareTo(data[child]) > 0) {
+            if (child < size && child != size && tmp.compareTo(
+                    data[child]) > 0) {
                 data[k] = data[child];
             } else {
                 break;
@@ -163,10 +165,10 @@ public class HeapSort<T extends Comparable<T>> {
     }
 
     public void print(T[] data) {
-//        for (T i : data)
-//        {
-//            System.out.print("[" + i + "]");
-//        }
+        //        for (T i : data)
+        //        {
+        //            System.out.print("[" + i + "]");
+        //        }
         for (int i = 0; i < data.length; i++) {
             System.out.print("[" + data[i] + "]");
         }

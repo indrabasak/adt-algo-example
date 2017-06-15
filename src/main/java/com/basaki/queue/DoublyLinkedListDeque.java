@@ -6,7 +6,8 @@ public class DoublyLinkedListDeque<T> {
     private Node<T> last;
 
     public static void main(String[] args) {
-        DoublyLinkedListDeque<String> deque = new DoublyLinkedListDeque<String>();
+        DoublyLinkedListDeque<String> deque =
+                new DoublyLinkedListDeque<String>();
         System.out.println("peek first: " + deque.peekFirst());
         System.out.println("peek last: " + deque.peekLast());
         deque.print();

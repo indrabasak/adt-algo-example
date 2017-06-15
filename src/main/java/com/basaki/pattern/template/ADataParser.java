@@ -1,5 +1,6 @@
 package com.basaki.pattern.template;
 
+@SuppressWarnings({"squid:S1610", "squid:S106"})
 public abstract class ADataParser {
     // Template method
     // This method defines a generic structure for parsing data

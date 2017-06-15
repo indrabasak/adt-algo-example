@@ -36,9 +36,9 @@ public class CheckIfANodeIsFriendOrFriendOfFriend {
 
     // Using bidirectional BFS + set intersection.
     // Perform BFS starting from each node. At each distance level, perform an
-// intersection of each visited set.
+    // intersection of each visited set.
     // ~O(x^(d/2) + x^(d/2)) where x = average number of friends and d =
-// distance between nodes
+    // distance between nodes
     public boolean isRelated2(Node node0, Node node1) {
         if (node0 == node1) {
             return false;

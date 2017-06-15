@@ -27,7 +27,8 @@ public class MaxNumOfCharInString {
         }
 
         System.out.println(maxIndex);
-        System.out.println("max char: " + (char) maxIndex + " occurrence: " + maxValue);
+        System.out.println(
+                "max char: " + (char) maxIndex + " occurrence: " + maxValue);
     }
 
     public static void main(String[] args) {

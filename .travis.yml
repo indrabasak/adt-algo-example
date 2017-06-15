@@ -4,7 +4,8 @@ jdk:
 before_script:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
-- mvn clean install sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=indrabasak-github -Dsonar.login=$SONAR_TOKEN
+- mvn clean install sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=indrabasak-github
+  -Dsonar.login=$SONAR_TOKEN
 cache:
   directories: "– $HOME/.m2 – $HOME/.sonar/cache"
 notifications:
@@ -15,4 +16,4 @@ notifications:
   use_notice: true
 env:
   global:
-    secure: kUMiW8LdZskyXxB1kpzzc+X/UGhg/uKg14XskIkhkQNTLSvwziHE7c4ue7JfeP8i4+pj6xhx5wq9yN1eyKbP159TjJpt515cv72lsH8R2VoDHV7yofWT4kNa2G5ksig4unfoNZDUwUTkgSH6TSoyezR+H6YZEiip3E2ZJKvd7IgLhLgs05eIQYI3ESAzAcvweXlkrrK5vO3ciwilRzmrZ8YTlzqPsL8M+0fu9t35dHycT3FmftQcXsql9P/j6ElCvtho0sK5FuO4m8gh18xFL5KCHpYpZxbZYgMxULfN6ke3JACx74jhHfXZjCf865OrVEst6+ACdM83HLc1uBtkZZ/JRQCpzkMSuMg8WjRN4bVkN1wRFu3tIIO1nW9glgOGsHi6dCHn10me+OAr5Y4iHfsu9NIXAo3Nkfmf1joVpVJlB02pyknq6WrDvTldguX8U6R29+/WJoYH3paLo4govFp4cc25eXyVWMCr714cTeAbG88I85ilYE4Yis7YUjVPy2CcjhsYditCEAkxSysGay1mDifsQr0fTqS2N7u9hnFFtRmBr8WwfS6LRwDUPYRYB46MDgT0XVyh4mK4S2y2d7DQ6Lho4JykOhvygF5/TvEGDctvYBJWMMBMiPnLU7SCf3RcitQCqlB4Dxf49foFFwaSaJzEShfEdmbk90KxlA0=
+    secure: gB+Fet79DyCHPG035qNmhi621NC0OgDtY5mav/FkYMOEvSxEcySR8q0246CEqfZHwnFw8Fj3UJEb3rR6DwGUswwTxrD2m4uCiIIZYzTtyy6dYkVSAW2q7S5pFga+8QUXJpTUCcn8Z/QlAZunSDY+GCnkUhQSxsh2gYxqZ/ZqZJtDBUhRFWIfIFEmACh4Ix8QfTNlNAcvtBZQQzEfHfw8lVNAMW0Zn/vsEv2eQ4z6gl1nTvLiXvquawML0dGdyJoSJcuhu3znz9AekBV4oIyUyDYBL40X8QS6FgAtGMwAvwhAD2h0RliucF/3dLz5JPSjneTX2SBDWhi5oWcAHYQ7RMGvMKa/TVKIVxmg1O9r3p6Y9qwnPVYjQOozg4aT0eKVCxGlhdEFnJntez88Jvod8kza2lnM1nmlhDo1y476cWilSWWcLw70ZQv30S4n+YEfYcP+8J7PD4eShQ8PBDs4EaKPFa+9mxkmc6AEqR0K6KMqYmu3VBykvZPgLH/Leqa2SiPnxImbIeAUL5SETLUrmHVHsJWhT7o4suAmvzALYywqNLQiS5/4MS0AGbMCHk3Rxd1SZ70CM+PWhuaIH3fmk/ciDU8dtqFLftGos23e7gmVnKF0nbchpSvZtYGfOCLuzEfEqaky/E2Hj2wvdlJ0Sg2SGj1Wi7aSPcffIkLJN8A=
