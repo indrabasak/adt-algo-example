@@ -1,5 +1,6 @@
 package com.basaki;
 
+@SuppressWarnings({"squid:S106"})
 public class PyramidSequence {
 
     public static void print1(int num) {
@@ -41,8 +42,6 @@ public class PyramidSequence {
     }
 
     public static void main(String[] args) {
-        //print1(4);
-        //printPyramid(4);
         printPyramid2(4);
     }
 }

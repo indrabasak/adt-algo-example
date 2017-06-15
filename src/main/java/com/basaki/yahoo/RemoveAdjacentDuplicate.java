@@ -1,5 +1,6 @@
 package com.basaki.yahoo;
 
+@SuppressWarnings({"squid:S3776", "squid:S106", "squid:S1226"})
 public class RemoveAdjacentDuplicate {
 
     private static String remove(String value) {
@@ -15,7 +16,6 @@ public class RemoveAdjacentDuplicate {
         char[] buffer = value.toCharArray();
         StringBuilder bldr = new StringBuilder();
         boolean found = false;
-        //for (int i = 0; i < buffer.length - 1; i++)
         int i = 0;
         while (i < buffer.length - 1) {
             if (buffer[i] != buffer[i + 1]) {
@@ -34,7 +34,7 @@ public class RemoveAdjacentDuplicate {
         if (value.length() > 1 && found) {
             return remove(value);
         } else {
-            if (value == null || value.length() == 0) {
+            if (value.length() == 0) {
                 return "-1";
             } else {
                 return value;

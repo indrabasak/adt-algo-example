@@ -1,5 +1,6 @@
 package com.basaki.sort;
 
+@SuppressWarnings({"squid:S1118"})
 public class QuickSort {
 
     public static void sort(int[] values) {
@@ -57,10 +58,4 @@ public class QuickSort {
         values[i] = values[j];
         values[j] = tmp;
     }
-
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-
-    }
-
 }

@@ -10,7 +10,7 @@ public class WordBreak {
     private Map<String, String> memoized = new HashMap<>();
 
     public static void main(String[] args) {
-        Set<String> dict = new HashSet<String>();
+        Set<String> dict = new HashSet<>();
         //        dict.add("apple");
         //        dict.add("pie");
         //        dict.add("i");

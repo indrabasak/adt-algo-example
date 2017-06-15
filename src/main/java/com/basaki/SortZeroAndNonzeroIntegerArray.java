@@ -1,5 +1,6 @@
 package com.basaki;
 
+@SuppressWarnings({"squid:S106"})
 public class SortZeroAndNonzeroIntegerArray {
 
     public static int[] sort(int[] input) {

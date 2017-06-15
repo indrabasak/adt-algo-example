@@ -4,7 +4,6 @@ package com.basaki.list;
  * The <code>Node</code>
  *
  * @author Indra Basak
- * @copyright 2014 CA Technologies. All rights reserved.
  */
 public class Node<T extends Comparable<?>> {
 

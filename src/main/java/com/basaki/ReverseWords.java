@@ -3,13 +3,12 @@ package com.basaki;
 import java.util.ArrayList;
 import java.util.Stack;
 
+@SuppressWarnings({"squid:S106", "squid:CommentedOutCodeLine", "squid:S1149", "squid:S1643"})
 public class ReverseWords {
     public static void main(String[] args) {
         ReverseWords rw = new ReverseWords();
         String str1 = "I want to play";
-        //System.out.println("reverse of " + str1 + " is -> " + rw.reverse(str1));
         String str2 = "I     want     to     play";
-        //System.out.println("reverse of " + str2 + " is -> " + rw.reverse(str2));
 
         System.out.println(
                 "* reverse of " + str1 + " is -> " + rw.reverse2(str1));
@@ -24,7 +23,7 @@ public class ReverseWords {
         }
 
         String[] words = str.split(" ");
-        Stack<String> stk = new Stack<String>();
+        Stack<String> stk = new Stack<>();
 
         for (String word : words) {
             stk.push(word);
@@ -53,11 +52,11 @@ public class ReverseWords {
             swap(letters, i, letters.length - 1 - i);
         }
         //        for (int i = 0; i < letters.length; i++)
-        //        {
+        //        {squid:CommentedOutCodeLine
         //            System.out.print(letters[i]);
         //        }
 
-        ArrayList<Character> list = new ArrayList<Character>();
+        ArrayList<Character> list = new ArrayList<>();
         String revStr = "";
         for (int i = 0; i < letters.length; i++) {
             if (!Character.isWhitespace(letters[i])) {

@@ -1,6 +1,7 @@
 package com.basaki;
 
 
+@SuppressWarnings({"squid:S1481", "squid:S2440", "squid:S106", "squid:S2209", "squid:S1854"})
 public class TestClass {
 
     public static void main(String[] args) {
@@ -18,16 +19,17 @@ public class TestClass {
             case 5:
                 System.out.println("*****");
                 break;
+            case 3:
+                break;
             default:
                 System.out.println("*****");
                 break;
-            case 3:
         }
 
     }
 
     public void overload() {
-
+        //empty
     }
 
 }

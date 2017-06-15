@@ -30,7 +30,7 @@ public class SkipZeroIterator {
     }
 
     private class MyIterator implements Iterator<Integer> {
-        private Stack<Integer> stack = new Stack<Integer>();
+        private Stack<Integer> stack = new Stack<>();
 
         public MyIterator() {
             for (int i = values.length - 1; i >= 0; i--) {

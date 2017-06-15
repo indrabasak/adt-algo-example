@@ -9,7 +9,7 @@ import java.util.Stack;
  * The <code>BST</code>
  *
  * @author Indra Basak
- * @copyright 2014 CA Technologies. All rights reserved.
+ *
  */
 public class BST<T extends Comparable<T>> implements Iterable<T> {
     private Node<T> fRoot;

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class WordSearchInMatrix {
 
     public static int search(char[][] matrix, char[] textToFind) {
-        ArrayList<StringBuilder> columns = new ArrayList<StringBuilder>();
+        ArrayList<StringBuilder> columns = new ArrayList<>();
         String text = new String(textToFind);
         int count = 0;
 
