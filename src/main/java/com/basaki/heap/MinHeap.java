@@ -3,14 +3,14 @@ package com.basaki.heap;
 import java.util.Arrays;
 
 public class MinHeap<T extends Comparable<T>> {
-    private Object[] fHeap;
+    private Object[] heap;
 
-    private int fHeapSize;
+    private int heapSize;
 
-    private int fSize = 5;
+    private int size = 5;
 
     public MinHeap() {
-        fHeap = new Object[fSize];
+        heap = new Object[size];
     }
 
     public static void main(String[] args) {
@@ -32,33 +32,33 @@ public class MinHeap<T extends Comparable<T>> {
     }
 
     private void ensureCapacity() {
-        int oldCapacity = fHeap.length;
-        if (fHeapSize == oldCapacity) {
+        int oldCapacity = heap.length;
+        if (heapSize == oldCapacity) {
             int newCapacity = oldCapacity * 2;
-            fHeap = Arrays.copyOf(fHeap, newCapacity);
+            heap = Arrays.copyOf(heap, newCapacity);
         }
     }
 
     @SuppressWarnings("unchecked")
     public void insert(T data) {
         //new element starts at the last position
-        int position = fHeapSize++;
+        int position = heapSize++;
 
         //make sure the array is large enough to hold the bew value
         ensureCapacity();
 
         //now percolate up
         while (position > 0
-                && data.compareTo((T) (fHeap[(position - 1) / 2])) < 0) {
-            fHeap[position] = fHeap[(position - 1) / 2];
+                && data.compareTo((T) (heap[(position - 1) / 2])) < 0) {
+            heap[position] = heap[(position - 1) / 2];
             position = (position - 1) / 2;
         }
-        fHeap[position] = data;
+        heap[position] = data;
     }
 
     public void printHeap() {
-        for (int i = 0; i < fHeapSize; i++) {
-            System.out.print("[" + fHeap[i] + "] ");
+        for (int i = 0; i < heapSize; i++) {
+            System.out.print("[" + heap[i] + "] ");
         }
         System.out.println();
     }
