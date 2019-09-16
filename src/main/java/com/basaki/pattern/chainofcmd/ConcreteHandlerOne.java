@@ -1,5 +1,6 @@
 package com.basaki.pattern.chainofcmd;
 
+@SuppressWarnings({"squid:S106"})
 public class ConcreteHandlerOne
         implements IHandler {
     private IHandler successor;
@@ -15,9 +16,8 @@ public class ConcreteHandlerOne
                     .println(
                             "Negative values are handled by ConcreteHandlerOne:");
             System.out.println("\tConcreteHandlerOne.HandleRequest : "
-                    + request.getDescription() + request.getValue());
+                                       + request.getDescription() + request.getValue());
         } else {
-            //super.handleRequest(request);
             successor.handleRequest(request);
         }
     }

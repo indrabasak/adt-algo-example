@@ -1,5 +1,6 @@
 package com.basaki;
 
+@SuppressWarnings({"squid:S106", "squid:S3012"})
 public class LongestSequenceWithMinDiff {
 
     public static int findLongestSequence(int[] values) {
@@ -53,8 +54,6 @@ public class LongestSequenceWithMinDiff {
             mergeSort(values, lo, mid);
             mergeSort(values, mid + 1, hi);
             merge(values, lo, mid, hi);
-            // System.out.print(lo + " " + mid + " " + hi + "          ");
-            // print(values);
         }
     }
 

@@ -1,10 +1,6 @@
 package com.basaki;
 
+@SuppressWarnings("squid:S1118")
 public class ClassA {
     static String str = "A";
-
-    public ClassA() {
-        // TODO Auto-generated constructor stub
-    }
-
 }

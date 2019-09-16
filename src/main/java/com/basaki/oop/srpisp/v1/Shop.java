@@ -1,5 +1,6 @@
 package com.basaki.oop.srpisp.v1;
 
+@SuppressWarnings({"squid:S106"})
 public class Shop {
     public static void main(String[] args) {
         Shop shop = new Shop();

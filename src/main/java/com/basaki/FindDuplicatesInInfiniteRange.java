@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
+@SuppressWarnings({"squid:S106", "squid:S1066", "squid:S3776"})
 public class FindDuplicatesInInfiniteRange {
 
     public static void findDuplicate(int[] input) {
@@ -27,7 +28,7 @@ public class FindDuplicatesInInfiniteRange {
     }
 
     public static void findDuplicate2(int[] input) {
-        Set<Integer> dups = new HashSet<Integer>();
+        Set<Integer> dups = new HashSet<>();
         for (int i = 0; i < input.length; i++) {
 
             if (!dups.contains(input[i])) {
@@ -40,7 +41,6 @@ public class FindDuplicatesInInfiniteRange {
                     }
                 }
             }
-
         }
 
         for (int x : dups) {
@@ -50,8 +50,8 @@ public class FindDuplicatesInInfiniteRange {
     }
 
     public static void findDuplicate3(int[] input) {
-        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-        Set<Integer> dups = new HashSet<Integer>();
+        HashMap<Integer, Integer> map = new HashMap<>();
+        Set<Integer> dups = new HashSet<>();
         for (int i = 0; i < input.length; i++) {
             if (map.containsKey(input[i])) {
                 dups.add(input[i]);

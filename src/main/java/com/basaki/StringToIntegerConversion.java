@@ -2,11 +2,10 @@ package com.basaki;
 
 import java.util.ArrayList;
 
+@SuppressWarnings({"squid:S106"})
 public class StringToIntegerConversion {
 
     public static int convertStringToInt(String str) {
-        // Integer.parseInt(s);
-        // Integer.toString(i)
         boolean neg = false;
         int startIdx = 0;
         int num = 0;
@@ -50,7 +49,7 @@ public class StringToIntegerConversion {
             num *= -1;
         }
 
-        ArrayList<Character> chars = new ArrayList<Character>();
+        ArrayList<Character> chars = new ArrayList<>();
         do {
             char c = (char) (num % 10 + '0');
             chars.add(c);

@@ -1,5 +1,6 @@
 package com.basaki.pattern.mediator;
 
+@SuppressWarnings({"squid:S106"})
 public class Runway
         implements ICommand {
     private IMediator mediator;

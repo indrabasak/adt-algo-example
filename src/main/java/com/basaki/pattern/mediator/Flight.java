@@ -1,7 +1,7 @@
 package com.basaki.pattern.mediator;
 
-public class Flight
-        implements ICommand {
+@SuppressWarnings({"squid:S106"})
+public class Flight implements ICommand {
 
     private IMediator mediator;
 

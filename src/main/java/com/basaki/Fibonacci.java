@@ -1,13 +1,14 @@
 package com.basaki;
 
+@SuppressWarnings({"squid:S106"})
 public class Fibonacci {
-    public static final int kMax = 1000;
+    public static final int K_MAX = 1000;
 
     private long[] fLookupTable;
 
     public Fibonacci() {
-        fLookupTable = new long[kMax + 1];
-        for (int i = 0; i <= kMax; i++) {
+        fLookupTable = new long[K_MAX + 1];
+        for (int i = 0; i <= K_MAX; i++) {
             fLookupTable[i] = -1;
         }
     }

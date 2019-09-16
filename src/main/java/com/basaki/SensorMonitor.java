@@ -2,9 +2,10 @@ package com.basaki;
 
 import java.util.ArrayList;
 
+@SuppressWarnings({"squid:S106"})
 public class SensorMonitor {
 
-    private ArrayList<Integer> list = new ArrayList<Integer>();
+    private ArrayList<Integer> list = new ArrayList<>();
 
     public static void main(String[] args) {
         SensorMonitor monitor = new SensorMonitor();
@@ -24,10 +25,9 @@ public class SensorMonitor {
     }
 
     public void record(int value) {
-        if (list.size() == 0) {
+        if (list.isEmpty()) {
             list.add(value);
         } else {
-            boolean found = false;
             int index = 0;
             while (index < list.size() && list.get(index) < value) {
                 index++;

@@ -2,6 +2,7 @@ package com.basaki.heap;
 
 import java.util.Arrays;
 
+@SuppressWarnings({"squid:S106"})
 public class MinHeap<T extends Comparable<T>> {
     private Object[] heap;
 
@@ -14,7 +15,7 @@ public class MinHeap<T extends Comparable<T>> {
     }
 
     public static void main(String[] args) {
-        MinHeap<Integer> heap = new MinHeap<Integer>();
+        MinHeap<Integer> heap = new MinHeap<>();
         heap.insert(16);
         heap.printHeap();
         heap.insert(9);

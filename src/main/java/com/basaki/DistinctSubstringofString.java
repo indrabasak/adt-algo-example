@@ -3,6 +3,8 @@ package com.basaki;
 import java.util.Set;
 import java.util.TreeSet;
 
+@SuppressWarnings({"squid:S106", "squid:S1481", "squid:S1854",
+        "squid:CommentedOutCodeLine"})
 public class DistinctSubstringofString {
 
     public static void main(String[] args) {
@@ -22,7 +24,7 @@ public class DistinctSubstringofString {
             return ret;
         }
 
-        Set<String> substrs = new TreeSet<String>();
+        Set<String> substrs = new TreeSet<>();
         for (int i = 0; i < input.length(); i++) {
             for (int j = i; j <= input.length(); j++) {
                 String sfx = input.substring(i, j);

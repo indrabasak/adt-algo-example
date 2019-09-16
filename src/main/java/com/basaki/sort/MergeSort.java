@@ -1,5 +1,6 @@
 package com.basaki.sort;
 
+@SuppressWarnings({"squid:S106", "squid:S3012", "squid:S1871"})
 public class MergeSort {
 
     public static void sort2(int[] values) {
@@ -9,7 +10,6 @@ public class MergeSort {
     private static void mergeSort(int[] values, int lo, int hi) {
         if (lo < hi) {
             int mid = lo + (hi - lo) / 2;
-            // System.out.print(lo + " " + mid + " " + hi + "          ");
             mergeSort(values, lo, mid);
             mergeSort(values, mid + 1, hi);
             merge(values, lo, mid, hi);
@@ -114,8 +114,6 @@ public class MergeSort {
         int[] values =
                 {13, 12, 10, 4, 7, 6, 3};
         print(values);
-        // int[] sorted = sort(values);
-        // print(sorted);
         sort2(values);
         print(values);
     }

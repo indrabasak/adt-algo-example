@@ -4,10 +4,11 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+@SuppressWarnings({"squid:S106"})
 public class DuplicatesInUnsortedArray {
 
     public static void findDuplicates(int[] input) {
-        Map<Integer, Integer> map = new LinkedHashMap<Integer, Integer>();
+        Map<Integer, Integer> map = new LinkedHashMap<>();
 
         for (int i = 0; i < input.length; i++) {
             Integer value = map.get(input[i]);
@@ -18,7 +19,7 @@ public class DuplicatesInUnsortedArray {
             }
         }
 
-        Map<Integer, Integer> output = new LinkedHashMap<Integer, Integer>();
+        Map<Integer, Integer> output = new LinkedHashMap<>();
         for (Entry<Integer, Integer> entry : map.entrySet()) {
             if (entry.getValue() > 1) {
                 System.out.println(entry.getKey() + " --> " + entry.getValue());

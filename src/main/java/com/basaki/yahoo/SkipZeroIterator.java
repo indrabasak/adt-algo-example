@@ -3,6 +3,7 @@ package com.basaki.yahoo;
 import java.util.Iterator;
 import java.util.Stack;
 
+@SuppressWarnings({"squid:S106", "squid:S1149", "squid:S2272"})
 public class SkipZeroIterator {
     private int[] values;
 

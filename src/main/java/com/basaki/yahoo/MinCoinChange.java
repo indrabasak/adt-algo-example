@@ -1,5 +1,6 @@
 package com.basaki.yahoo;
 
+@SuppressWarnings({"squid:S106", "squid:S1066"})
 public class MinCoinChange {
 
     public static void findMinCoinChange(int[] denom, int total) {
@@ -59,14 +60,10 @@ public class MinCoinChange {
             return 0;
         }
 
-        // return count(denom, )
-        // count is sum of solutions (i) including S[m-1] (ii) excluding S[m-1]
-        // return count( S, m - 1, n ) + count( S, m, n-S[m-1] );
         return -1;
     }
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         int[] denom =
                 {25, 25, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 5};
         findMinCoinChange(denom, 100);

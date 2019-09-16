@@ -3,9 +3,12 @@ package com.basaki.yahoo;
 import java.util.LinkedList;
 import java.util.Queue;
 
+@SuppressWarnings({"squid:S106"})
 public class SimpleMovingAverage {
-    public static int MAX_SIZE = 18 * 60 * 5000;
-    private Queue<Double> values = new LinkedList<Double>();
+    public static final int MAX_SIZE = 18 * 60 * 5000;
+
+    private Queue<Double> values = new LinkedList<>();
+
     private double sum;
 
     public static void main(String[] args) {

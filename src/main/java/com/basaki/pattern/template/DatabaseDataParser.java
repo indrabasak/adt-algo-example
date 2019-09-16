@@ -1,5 +1,6 @@
 package com.basaki.pattern.template;
 
+@SuppressWarnings({"squid:S106"})
 public class DatabaseDataParser extends ADataParser {
 
     @Override

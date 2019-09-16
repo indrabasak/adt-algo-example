@@ -3,11 +3,12 @@ package com.basaki;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({"squid:S106"})
 public class SeattleNicePlaceSplit {
 
     public static void split(String input) {
         char[] buffer = input.toCharArray();
-        List<Character> sentence = new ArrayList<Character>();
+        List<Character> sentence = new ArrayList<>();
         for (int i = 0; i < buffer.length; i++) {
             if (buffer[i] == '.' || buffer[i] == ',' || buffer[i] == '!') {
                 StringBuilder bldr = new StringBuilder();

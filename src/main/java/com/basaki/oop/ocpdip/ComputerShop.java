@@ -1,5 +1,6 @@
 package com.basaki.oop.ocpdip;
 
+@SuppressWarnings({"squid:S106"})
 public class ComputerShop {
     public static void main(String[] args) {
         ComputerShop shop = new ComputerShop();

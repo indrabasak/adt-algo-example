@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Random;
 
+@SuppressWarnings({"squid:S106", "squid:S1450", "squid:S1148"})
 public class NewerHeap {
 
     private static int[] arr;

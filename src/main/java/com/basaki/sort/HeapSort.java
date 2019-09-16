@@ -2,11 +2,13 @@ package com.basaki.sort;
 
 import java.util.ArrayList;
 
+@SuppressWarnings({"squid:S106", "squid:S1854", "squid:S1481",
+        "squid:S4165", "squid:S2589"})
 public class HeapSort<T extends Comparable<T>> {
 
     public static void main(String[] args) {
-        HeapSort<Integer> hsort = new HeapSort<Integer>();
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        HeapSort<Integer> hsort = new HeapSort<>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(7);
         list.add(3);
         list.add(6);
@@ -18,11 +20,6 @@ public class HeapSort<T extends Comparable<T>> {
         hsort.print(data);
         hsort.sort(data);
         hsort.print(data);
-        int x = 7 / 2;
-        int y = (int) 7.5 / 2;
-        //System.out.println(x);
-        //System.out.println(y);
-
     }
 
     public void sortx(T[] data) {
@@ -154,8 +151,6 @@ public class HeapSort<T extends Comparable<T>> {
             size--;
             percolatingDown(data, size, 0);
         }
-/*       for(int k = 0; k < data.length-1; k++)
-          data[k] = heap[heap.length - 1 - k];*/
     }
 
     private void swap(T[] data, int i, int j) {
@@ -165,10 +160,6 @@ public class HeapSort<T extends Comparable<T>> {
     }
 
     public void print(T[] data) {
-        //        for (T i : data)
-        //        {
-        //            System.out.print("[" + i + "]");
-        //        }
         for (int i = 0; i < data.length; i++) {
             System.out.print("[" + data[i] + "]");
         }

@@ -1,5 +1,6 @@
 package com.basaki;
 
+@SuppressWarnings({"squid:S106", "squid:S1854"})
 public class SearchForPattern {
 
     public static void findIndexes() {
@@ -19,7 +20,7 @@ public class SearchForPattern {
         System.out.println(srchPtrn.bruteForceSearch(
                 "don’t be evil.being evil is bad", "be"));
         System.out.println(srchPtrn.kmpSearch("abcabdabcabeabcabdabcabd",
-                "abcabdabc"));
+                                              "abcabdabc"));
 
     }
 
@@ -73,7 +74,8 @@ public class SearchForPattern {
      * @return partial match table which indicates
      */
     public int[] preProcessPattern(char[] pattern) {
-        int i = 0, j = -1;
+        int i = 0;
+        int j = -1;
         int ptrnLen = pattern.length;
         int[] b = new int[ptrnLen + 1];
 
@@ -130,7 +132,8 @@ public class SearchForPattern {
         // initialize new array and preprocess the pattern
         int[] b = preProcessPattern(ptrn);
 
-        int i = 0, j = 0;
+        int i = 0;
+        int j = 0;
         // pattern and tex
         while (i < txtLen) {
             while (j >= 0 && text[i] != ptrn[j]) {

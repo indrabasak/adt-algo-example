@@ -1,10 +1,11 @@
 package com.basaki.list;
 
+@SuppressWarnings({"squid:S106"})
 public class LinkedList<T extends Comparable<?>> {
     private Node<T> fHead;
 
     public static void main(String[] args) {
-        LinkedList<Integer> list = new LinkedList<Integer>();
+        LinkedList<Integer> list = new LinkedList<>();
         list.add(4);
         list.add(7);
         list.add(4);
@@ -24,7 +25,7 @@ public class LinkedList<T extends Comparable<?>> {
             return retVal;
         }
 
-        Node<T> newNode = new Node<T>(data);
+        Node<T> newNode = new Node<>(data);
         if (fHead == null) {
             fHead = newNode;
             retVal = true;

@@ -3,6 +3,8 @@ package com.basaki.concurrency;
 import java.io.Serializable;
 import java.util.concurrent.locks.ReentrantLock;
 
+@SuppressWarnings({"squid:S2326", "squid:S1118", "squid:S3776",
+        "squid:S3077", "squid:S1068", "squid:S3985"})
 public class MyStripedMap<K, V> {
     /*
      * The default initial capacity for this table, used when not otherwise
@@ -43,8 +45,24 @@ public class MyStripedMap<K, V> {
             return value;
         }
 
+        @Override
         public final int hashCode() {
             return key.hashCode() ^ value.hashCode();
+        }
+
+        @Override
+        public final boolean equals(Object obj) {
+            if (!(obj instanceof Node)) {
+                return false;
+            }
+
+            Object otherKey = ((Node) obj).getKey();
+            Object otherValue = ((Node) obj).getValue();
+
+            return otherKey != null
+                    && (otherKey == key || otherKey.equals(key))
+                    && otherValue != null
+                    && (otherValue == value || otherValue.equals(value));
         }
 
         public final String toString() {
@@ -53,7 +71,7 @@ public class MyStripedMap<K, V> {
     }
 
     private static final class Segment<K, V> extends ReentrantLock implements
-            Serializable {
+                                                                   Serializable {
         private static final long serialVersionUID = 1L;
         final float fLoadFactor;
         transient volatile int fCount;
@@ -130,8 +148,7 @@ public class MyStripedMap<K, V> {
                     }
                 } else {
                     oldValue = null;
-                    // ++modCount;
-                    tab[index] = new Node<K, V>(hash, key, value, head);
+                    tab[index] = new Node<>(hash, key, value, head);
                     fCount = count; // write-volatile
                 }
                 return oldValue;
@@ -180,8 +197,8 @@ public class MyStripedMap<K, V> {
                         for (Node<K, V> p = head; p != lastRun; p = p.next) {
                             int k = p.hash & sizeMask;
                             Node<K, V> n = newTable[k];
-                            newTable[k] = new Node<K, V>(p.hash, p.key,
-                                    p.value, n);
+                            newTable[k] = new Node<>(p.hash, p.key,
+                                                     p.value, n);
                         }
                     }
                 }

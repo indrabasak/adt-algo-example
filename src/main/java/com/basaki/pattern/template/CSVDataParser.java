@@ -1,5 +1,6 @@
 package com.basaki.pattern.template;
 
+@SuppressWarnings({"squid:S106"})
 public class CSVDataParser extends ADataParser {
 
     @Override

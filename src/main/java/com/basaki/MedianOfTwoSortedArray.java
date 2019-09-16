@@ -1,11 +1,14 @@
 package com.basaki;
 
+@SuppressWarnings({"squid:S1118"})
 public class MedianOfTwoSortedArray {
 
     public static float findMedian(int[] a, int[] b) {
         int[] answer = new int[a.length + b.length];
 
-        int i = 0, j = 0, k = 0;
+        int i = 0;
+        int j = 0;
+        int k = 0;
         //create a joined sorted list
         while (i < a.length && j < b.length) {
             if (a[i] < b[j]) {
@@ -45,10 +48,4 @@ public class MedianOfTwoSortedArray {
 
         return median;
     }
-
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-
-    }
-
 }

@@ -1,5 +1,6 @@
 package com.basaki.ifc;
 
+@SuppressWarnings("squid:S4144")
 public class Square implements IShape {
 
     private int length;

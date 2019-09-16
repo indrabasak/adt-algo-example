@@ -1,5 +1,6 @@
 package com.basaki;
 
+@SuppressWarnings({"squid:S106", "squid:S00112"})
 public class FindNthLargestInAnArray {
     private static void print(int[] values) {
         for (int i = 0; i < values.length; i++) {
@@ -109,11 +110,6 @@ public class FindNthLargestInAnArray {
         int[] values = {8, 7, 21, 60, 45, 2};
 
         System.out.println(FindNthLargestInAnArray.findNthLargest(values, 4));
-        // System.out.println(FindNthLargestInAnArray.findNthLargest(values,
-        // 5));
-        // System.out.println(FindNthLargestInAnArray.findNthLargest(values,
-        // 1));
-
     }
 
 }

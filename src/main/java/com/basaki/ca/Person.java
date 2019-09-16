@@ -5,10 +5,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
 
+@SuppressWarnings({"squid:S114", "squid:S1148", "squid:S1149",
+        "squid:CommentedOutCodeLine", "squid:S1481",
+        "squid:UnusedPrivateMetho", "squid:S1854"})
 public class Person {
     private static final Person[] EMPTY_PEOPLE_ARRAY = new Person[0];
     //private static CopyOnWriteArrayList<Person> people = new CopyOnWriteArrayList<Person>();
-    protected static Vector<Person> people = new Vector<Person>();
+    protected static Vector<Person> people = new Vector<>();
     //private String fName = "";
     //private String fAddress = "";
     private final String fName;
@@ -43,7 +46,7 @@ public class Person {
         if (people.isEmpty()) {
             return Collections.emptyList();
         } else {
-            return new ArrayList<Person>(people);
+            return new ArrayList<>(people);
         }
     }
 
@@ -70,21 +73,9 @@ public class Person {
         String result = "";
         result += fName;
 
-        // String[] items = address.split ("\\s+", -2);
-        // for (int i = 0; i< items.length; i++)
-        // {
-        // result += "|";
-        // result += items[i];
-        // }
-
         result += "|";
         result += fAddress;
 
         return result;
     }
-
-    private void xmethod() {
-
-    }
-
 }

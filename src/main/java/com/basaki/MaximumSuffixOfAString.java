@@ -2,12 +2,8 @@ package com.basaki;
 
 import java.util.ArrayList;
 
+@SuppressWarnings({"squid:S3516"})
 public class MaximumSuffixOfAString {
-
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-
-    }
 
     public String findMaxSuffix(String input) {
         if (input == null) {
@@ -18,7 +14,7 @@ public class MaximumSuffixOfAString {
         boolean[] maxChar = new boolean[chars.length];
 
         char c = chars[0];
-        ArrayList<Integer> lowIdxs = new ArrayList<Integer>();
+        ArrayList<Integer> lowIdxs = new ArrayList<>();
         lowIdxs.add(0);
         maxChar[0] = true;
         for (int i = 1; i < chars.length; i++) {

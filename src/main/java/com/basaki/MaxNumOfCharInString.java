@@ -1,16 +1,17 @@
 package com.basaki;
 
+@SuppressWarnings({"squid:S106", "squid:S00112", "squid:S1066"})
 public class MaxNumOfCharInString {
 
     public static void maxChar(String input) {
         if (input == null) {
-            System.out.println("Null string");
+            throw new RuntimeException("null input");
         }
 
-        int num[] = new int[256];
+        int[] num = new int[256];
         char[] chars = input.toCharArray();
         int maxValue = Integer.MIN_VALUE;
-        //System.out.println(maxValue);
+
         int maxIndex = 0;
 
         for (int i = 0; i < chars.length; i++) {

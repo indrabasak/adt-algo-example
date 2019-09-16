@@ -1,5 +1,6 @@
 package com.basaki.queue;
 
+@SuppressWarnings({"squid:S106", "squid:S1192"})
 public class DoublyLinkedListDeque<T> {
     private Node<T> first;
 
@@ -7,7 +8,7 @@ public class DoublyLinkedListDeque<T> {
 
     public static void main(String[] args) {
         DoublyLinkedListDeque<String> deque =
-                new DoublyLinkedListDeque<String>();
+                new DoublyLinkedListDeque<>();
         System.out.println("peek first: " + deque.peekFirst());
         System.out.println("peek last: " + deque.peekLast());
         deque.print();
@@ -36,7 +37,7 @@ public class DoublyLinkedListDeque<T> {
     }
 
     public void addFirst(T data) {
-        Node<T> node = new Node<T>(data);
+        Node<T> node = new Node<>(data);
         if (first == null) {
             first = node;
             last = node;
@@ -49,7 +50,7 @@ public class DoublyLinkedListDeque<T> {
     }
 
     public void addLast(T data) {
-        Node<T> node = new Node<T>(data);
+        Node<T> node = new Node<>(data);
         if (first == null) {
             first = node;
             return;

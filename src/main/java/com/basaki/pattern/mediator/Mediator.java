@@ -1,9 +1,11 @@
 package com.basaki.pattern.mediator;
 
-public class Mediator
-        implements IMediator {
-    public boolean land;
+@SuppressWarnings({"squid:S1450", "squid:S1068"})
+public class Mediator implements IMediator {
+    private boolean land;
+
     private Flight flight;
+
     private Runway runway;
 
     public void registerRunway(Runway runway) {

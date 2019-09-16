@@ -1,7 +1,7 @@
 package com.basaki.pattern.chainofcmd;
 
-public class ConcreteHandlerTwo
-        implements IHandler {
+@SuppressWarnings({"squid:S106"})
+public class ConcreteHandlerTwo implements IHandler {
     private IHandler successor;
 
     public void setSuccessor(IHandler successor) {
@@ -15,7 +15,7 @@ public class ConcreteHandlerTwo
                     .println(
                             "Positive values are handled by ConcreteHandlerTwo:");
             System.out.println("\tConcreteHandlerTwo.HandleRequest : "
-                    + request.getDescription() + request.getValue());
+                                       + request.getDescription() + request.getValue());
         } else {
             successor.handleRequest(request);
         }

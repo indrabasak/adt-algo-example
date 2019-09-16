@@ -1,6 +1,6 @@
 package com.basaki;
 
-@SuppressWarnings({"squid:S106"})
+@SuppressWarnings({"squid:S106", "squid:S4165"})
 public class SortZeroAndNonzeroIntegerArray {
 
     public static int[] sort(int[] input) {

@@ -1,5 +1,6 @@
 package com.basaki;
 
+@SuppressWarnings({"squid:S106", "squid:S1192"})
 public class Factorial {
 
     public static void main(String[] args) {

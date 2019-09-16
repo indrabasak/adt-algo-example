@@ -1,7 +1,7 @@
 package com.basaki.pattern.chainofcmd;
 
-public class ConcreteHandlerThree
-        implements IHandler {
+@SuppressWarnings({"squid:S106"})
+public class ConcreteHandlerThree implements IHandler {
     private IHandler successor;
 
     public void setSuccessor(IHandler successor) {

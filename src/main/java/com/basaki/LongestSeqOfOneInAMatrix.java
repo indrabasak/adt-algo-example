@@ -2,12 +2,13 @@ package com.basaki;
 
 import java.util.ArrayList;
 
+@SuppressWarnings({"squid:S106", "squid:S3776", "squid:S1643"})
 public class LongestSeqOfOneInAMatrix {
 
     public static int longestSequenceOfOnes(int[][] matrix) {
         int count = 0;
 
-        ArrayList<String> columns = new ArrayList<String>();
+        ArrayList<String> columns = new ArrayList<>();
 
         for (int row = 0; row < matrix.length; row++) {
             int tempRowSeqCount = 0;

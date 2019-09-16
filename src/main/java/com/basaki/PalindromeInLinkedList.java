@@ -2,8 +2,10 @@ package com.basaki;
 
 import com.basaki.list.LinkedList;
 import com.basaki.list.Node;
+
 import java.util.Stack;
 
+@SuppressWarnings({"squid:S106", "squid:S1149"})
 public class PalindromeInLinkedList {
 
     public static boolean isPalindrome(Node<Character> head) {
@@ -11,7 +13,7 @@ public class PalindromeInLinkedList {
             return false;
         }
 
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
         Node<Character> curr = head;
         while (curr != null) {
             stack.add(curr.getData());
@@ -50,14 +52,14 @@ public class PalindromeInLinkedList {
     }
 
     public static void main(String[] args) {
-        LinkedList<Character> list = new LinkedList<Character>();
+        LinkedList<Character> list = new LinkedList<>();
         list.add('r');
         list.add('a');
         list.add('d');
         list.add('a');
         list.add('r');
         System.out.println(isPalindrome(list.getHead()));
-        list = new LinkedList<Character>();
+        list = new LinkedList<>();
         list.add('d');
         list.add('a');
         list.add('k');
