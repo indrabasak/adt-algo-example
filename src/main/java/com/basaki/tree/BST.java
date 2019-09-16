@@ -9,8 +9,9 @@ import java.util.Stack;
  * The <code>BST</code>
  *
  * @author Indra Basak
- *
  */
+@SuppressWarnings({"squid:S106", "squid:S1192", "squid:S1149", "squid:S00112",
+"squid:CommentedOutCodeLine", "squid:S1186", "squid:S2272"})
 public class BST<T extends Comparable<T>> implements Iterable<T> {
     private Node<T> fRoot;
 
@@ -18,7 +19,7 @@ public class BST<T extends Comparable<T>> implements Iterable<T> {
     public static void main(String[] args) {
         Integer[] a =
                 {1, 5, 2, 7, 4};
-        BST<Integer> bst = new BST<Integer>();
+        BST<Integer> bst = new BST<>();
         for (Integer n : a)
             bst.insert(n);
 
@@ -29,8 +30,9 @@ public class BST<T extends Comparable<T>> implements Iterable<T> {
         // build a mirror BST with a rule: Left > Parent > Right
         // code for the comparator at the bottom of the file
         // bst = new BST<Integer>(new MyComp1());
-        for (Integer n : a)
+        for (Integer n : a) {
             bst.insert(n);
+        }
 
         bst.preOrderTraversal();
         System.out.println();
@@ -71,7 +73,7 @@ public class BST<T extends Comparable<T>> implements Iterable<T> {
 
     private Node<T> insert(Node<T> node, T toInsert) {
         if (node == null) {
-            return new Node<T>(toInsert);
+            return new Node<>(toInsert);
         } else if (compare(toInsert, node.data) == 0) {
             return node;
         } else if (compare(toInsert, node.data) < 0) {
@@ -166,15 +168,17 @@ public class BST<T extends Comparable<T>> implements Iterable<T> {
      * a level before going to a lower level.
      */
     public void printLevelOrderTraversal() {
-        Queue<Node<T>> queue = new LinkedList<Node<T>>();
+        Queue<Node<T>> queue = new LinkedList<>();
         queue.add(fRoot);
         while (!queue.isEmpty()) {
             Node<T> x = queue.remove();
             if (x != null) {
                 System.out.print(x.data + " --> ");
             }
-            if (x == null)
+
+            if (x == null) {
                 continue;
+            }
             // keys.enqueue(x.key);
             queue.add(x.left);
             queue.add(x.right);
@@ -182,7 +186,7 @@ public class BST<T extends Comparable<T>> implements Iterable<T> {
     }
 
     public void printPreOrderTraversal() {
-        Stack<Node<T>> stack = new Stack<Node<T>>();
+        Stack<Node<T>> stack = new Stack<>();
         stack.push(fRoot);
         while (!stack.isEmpty()) {
             Node<T> current = stack.pop();
@@ -198,15 +202,13 @@ public class BST<T extends Comparable<T>> implements Iterable<T> {
                 stack.push(current.left);
             }
 
-            if (current != null) {
-                System.out.print(current.data + " --> ");
-            }
+            System.out.print(current.data + " --> ");
         }
     }
 
     //traverses node in ascending order
     public void printInOrderTraversal() {
-        Stack<Node<T>> stack = new Stack<Node<T>>();
+        Stack<Node<T>> stack = new Stack<>();
         Node<T> current = fRoot;
 
         while (!stack.isEmpty() || current != null) {
@@ -293,7 +295,7 @@ public class BST<T extends Comparable<T>> implements Iterable<T> {
     }
 
     private class MyIterator implements Iterator<T> {
-        Stack<Node<T>> stk = new Stack<Node<T>>();
+        Stack<Node<T>> stk = new Stack<>();
 
         public MyIterator() {
             if (fRoot != null) {
@@ -323,24 +325,27 @@ public class BST<T extends Comparable<T>> implements Iterable<T> {
             return cur.data;
         }// end of next()
 
+        @Override
         public void remove() {
 
         }
     }
 
     @SuppressWarnings("hiding")
-    private class Node<T> {
-        private T data;
+    private class Node<N> {
+        private N data;
 
-        private Node<T> left, right;
+        private Node<N> left;
 
-        public Node(T data, Node<T> l, Node<T> r) {
+        private Node<N> right;
+
+        public Node(N data, Node<N> l, Node<N> r) {
             left = l;
             right = r;
             this.data = data;
         }
 
-        public Node(T data) {
+        public Node(N data) {
             this(data, null, null);
         }
 

@@ -1,5 +1,6 @@
 package com.basaki.sort;
 
+@SuppressWarnings({"squid:S106"})
 public class BubbleSort {
 
     /**

@@ -8,7 +8,7 @@ public class ChatMediatorImpl
     private List<User> users;
 
     public ChatMediatorImpl() {
-        this.users = new ArrayList<User>();
+        this.users = new ArrayList<>();
     }
 
     @Override

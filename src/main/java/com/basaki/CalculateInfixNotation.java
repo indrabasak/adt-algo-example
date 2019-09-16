@@ -2,19 +2,20 @@ package com.basaki;
 
 import java.util.Stack;
 
+@SuppressWarnings({"squid:S106", "squid:S1149"})
 public class CalculateInfixNotation {
 
     private static Integer execute(final Operator opr, final int b,
-            final int a) {
+                                   final int a) {
         System.out.println("&&&&& " + a + b + opr.getSign());
         switch (opr) {
-            case addition:
+            case ADDITION:
                 return a + b;
-            case subtraction:
+            case SUBTRACTION:
                 return a - b;
-            case multiplication:
+            case MULTIPLICATION:
                 return a * b;
-            case division:
+            case DIVISION:
                 return a / b;
             default:
                 return null;
@@ -22,8 +23,8 @@ public class CalculateInfixNotation {
     }
 
     public static double calculate(String expression) {
-        Stack<Operator> operator = new Stack<Operator>();
-        Stack<Integer> operand = new Stack<Integer>();
+        Stack<Operator> operator = new Stack<>();
+        Stack<Integer> operand = new Stack<>();
 
         boolean prevInt = false;
         for (int i = 0; i < expression.length(); i++) {
@@ -34,24 +35,21 @@ public class CalculateInfixNotation {
             try {
                 final Operator opr = Operator.getOperatorforSign(k);
                 prevInt = false;
-                // System.out.println(opr.name());
                 if (!operator.empty()) {
                     while (!operator.empty()
                             && (opr.getPriority() <= operator.peek()
                             .getPriority())) {
-                        // postfix += stack.pop().getSign();
                         int b = operand.pop();
                         int a = operand.pop();
                         Operator o = operator.pop();
                         int result = execute(o, b, a);
                         System.out.println("&&&-1 " + a + ", " + b + " " + o
-                                + " = " + result);
+                                                   + " = " + result);
                         operand.push(result);
                     }
                 }
                 System.out.println("opr.sign: " + opr.sign);
                 operator.push(opr);
-                // System.out.println(stack);
             } catch (final IllegalArgumentException e) {
                 int oprd = Integer.parseInt("" + k);
                 if (prevInt) {
@@ -60,7 +58,6 @@ public class CalculateInfixNotation {
                 System.out.println("oprd: " + oprd);
                 operand.push(oprd);
                 prevInt = true;
-                // postfix += k;
             }
         }
 
@@ -71,7 +68,7 @@ public class CalculateInfixNotation {
             Operator o = operator.pop();
             int result = execute(o, b, a);
             System.out.println("&&&-2 " + a + ", " + b + " " + o + " = "
-                    + result);
+                                       + result);
             operand.push(result);
         }
 
@@ -85,8 +82,10 @@ public class CalculateInfixNotation {
     }
 
     enum Operator {
-        addition('+', 0), subtraction('-', 0), multiplication('*', 1), division(
-                '/', 1);
+        ADDITION('+', 0),
+        SUBTRACTION('-', 0),
+        MULTIPLICATION('*', 1),
+        DIVISION('/', 1);
 
         private final char sign;
         private final int priority;

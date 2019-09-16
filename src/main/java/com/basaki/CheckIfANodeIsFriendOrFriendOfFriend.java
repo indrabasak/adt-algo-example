@@ -4,7 +4,10 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+@SuppressWarnings({"squid:S1192", "squid:S3776", "squid:S106",
+        "squid:ClassVariableVisibilityCheck"})
 public class CheckIfANodeIsFriendOrFriendOfFriend {
 
     public boolean isRelated1(Node node0, Node node1) {
@@ -12,10 +15,10 @@ public class CheckIfANodeIsFriendOrFriendOfFriend {
             return false;
         }
         int iterations = 0;
-        HashSet<Node> visitedSet = new HashSet<Node>();
-        ArrayDeque<Node> queue = new ArrayDeque<Node>();
+        HashSet<Node> visitedSet = new HashSet<>();
+        ArrayDeque<Node> queue = new ArrayDeque<>();
         queue.add(node0);
-        while (queue.size() > 0) {
+        while (!queue.isEmpty()) {
             ++iterations;
             Node node = queue.remove();
             if (node == node1) {
@@ -44,15 +47,15 @@ public class CheckIfANodeIsFriendOrFriendOfFriend {
             return false;
         }
         int iterations = 0;
-        HashSet<Node> visitedSet0 = new HashSet<Node>();
-        HashSet<Node> visitedSet1 = new HashSet<Node>();
-        ArrayDeque<Node> queue0 = new ArrayDeque<Node>();
-        ArrayDeque<Node> queue1 = new ArrayDeque<Node>();
+        HashSet<Node> visitedSet0 = new HashSet<>();
+        HashSet<Node> visitedSet1 = new HashSet<>();
+        ArrayDeque<Node> queue0 = new ArrayDeque<>();
+        ArrayDeque<Node> queue1 = new ArrayDeque<>();
         queue0.add(node0);
         queue1.add(node1);
         int depthTillNextIteration0 = 1;
         int depthTillNextIteration1 = 1;
-        while (queue0.size() > 0 && queue1.size() > 0) {
+        while (!queue0.isEmpty() && !queue1.isEmpty()) {
             while (depthTillNextIteration0 > 0) {
                 ++iterations;
                 Node node00 = queue0.remove();
@@ -87,7 +90,7 @@ public class CheckIfANodeIsFriendOrFriendOfFriend {
         return false;
     }
 
-    public boolean intersects(HashSet<Node> set0, HashSet<Node> set1) {
+    public boolean intersects(Set<Node> set0, Set<Node> set1) {
         for (Node node : set0) {
             if (set1.contains(node)) {
                 return true;
@@ -103,7 +106,7 @@ public class CheckIfANodeIsFriendOrFriendOfFriend {
 
         public Node(String name) {
             this.name = name;
-            friends = new ArrayList<Node>();
+            friends = new ArrayList<>();
         }
 
         public void beFriend(Node friend) {
