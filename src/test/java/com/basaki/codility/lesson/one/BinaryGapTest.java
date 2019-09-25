@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestBinaryGap {
+public class BinaryGapTest {
 
     @Test
     public void testSolution() {

@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestCountDiv {
+public class CountDivTest {
 
     @Test
     public void testSolution() {

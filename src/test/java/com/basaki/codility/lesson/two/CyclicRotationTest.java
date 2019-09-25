@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 import static org.junit.Assert.assertTrue;
 
-public class TestCyclicRotation {
+public class CyclicRotationTest {
 
     @Test
     public void testSolution() {

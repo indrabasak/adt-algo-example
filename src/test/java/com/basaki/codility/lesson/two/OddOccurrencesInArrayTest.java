@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestOddOccurrencesInArray {
+public class OddOccurrencesInArrayTest {
 
     @Test
     public void testSolution() {

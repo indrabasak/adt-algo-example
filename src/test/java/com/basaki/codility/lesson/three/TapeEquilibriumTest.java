@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestTapeEquilibrium {
+public class TapeEquilibriumTest {
 
     @Test
     public void testSolution() {
