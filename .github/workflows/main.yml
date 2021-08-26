@@ -31,4 +31,4 @@ jobs:
           java-version: 11
           
       - name: Build project with Maven
-        run: mvn install -B -V
+        run: mvn clean install sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=indrabasak-github -Dsonar.login=$SONAR_TOKEN
