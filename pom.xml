@@ -13,8 +13,18 @@
         <java.version>1.8</java.version>
         <junit.version>4.13.2</junit.version>
         <lombok.version>1.18.20</lombok.version>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.failsafe.plugin.version>3.0.0-M4</maven.failsafe.plugin.version>
+        <maven.jacoco.plugin.version>0.8.5</maven.jacoco.plugin.version>
+        <maven.javadoc.plugin.version>3.1.1</maven.javadoc.plugin.version>
+        <maven.pmd.plugin.version>3.12.0</maven.pmd.plugin.version>
+        <maven.sonar.plugin.version>3.6.0.1398</maven.sonar.plugin.version>
+        <maven.source.plugin.version>3.2.0</maven.source.plugin.version>
+        <maven.surefire.plugin.version>3.0.0-M4</maven.surefire.plugin.version>
+        <maven.surefire.report.plugin.version>3.0.0-M4</maven.surefire.report.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <sl4j.version>1.7.28</sl4j.version>
     </properties>
 
     <dependencies>
@@ -28,7 +38,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.28</version>
+            <version>${sl4j.version}</version>
         </dependency>
 
         <dependency>
@@ -53,31 +63,18 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.4</version>
+                <version>${maven.jacoco.plugin.version}</version>
                 <executions>
-                    <execution>
-                        <id>default-prepare-agent</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                        <configuration>
-                            <destFile>${sonar.jacoco.reportPath}</destFile>
-                            <append>true</append>
-                            <propertyName>surefireArgLine</propertyName>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>default-report</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
                     <execution>
                         <id>pre-unit-test</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
+<!--                        <configuration>-->
+<!--                            <destFile>${sonar.jacoco.reportPath}</destFile>-->
+<!--                            <append>true</append>-->
+<!--                            <propertyName>surefireArgLine</propertyName>-->
+<!--                        </configuration>-->
                     </execution>
                     <execution>
                         <id>post-unit-test</id>
@@ -85,10 +82,6 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
-                        <configuration>
-                            <dataFile>${sonar.jacoco.utReportPath}</dataFile>
-                            <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
-                        </configuration>
                     </execution>
                     <execution>
                         <id>pre-integration-test</id>
@@ -96,11 +89,29 @@
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
-                        <configuration>
-                            <destFile>${sonar.jacoco.reportPath}</destFile>
-                            <propertyName>failsafe.argLine</propertyName>
-                        </configuration>
                     </execution>
+<!--                    <execution>-->
+<!--                        <id>post-unit-test</id>-->
+<!--                        <phase>test</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>report</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <dataFile>${sonar.jacoco.utReportPath}</dataFile>-->
+<!--                            <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>pre-integration-test</id>-->
+<!--                        <phase>pre-integration-test</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>prepare-agent</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <destFile>${sonar.jacoco.reportPath}</destFile>-->
+<!--                            <propertyName>failsafe.argLine</propertyName>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
                     <execution>
                         <id>post-integration-test</id>
                         <phase>post-integration-test</phase>
@@ -116,22 +127,23 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M3</version>
+                <version>${maven.surefire.plugin.version}</version>
                 <configuration>
-                    <forkCount>3</forkCount>
-                    <reuseForks>true</reuseForks>
-                    <argLine>-Xmx1024m</argLine>
-                    <useSystemClassLoader>false</useSystemClassLoader>
-                    <includes>
-                        <include>**/*Test.java</include>
-                        <include>**/*Tests.java</include>
-                    </includes>
+<!--                    <forkCount>3</forkCount>-->
+<!--                    <reuseForks>true</reuseForks>-->
+<!--                    <argLine>-Xmx1024m</argLine>-->
+<!--                    <useSystemClassLoader>false</useSystemClassLoader>-->
+                    <excludes>
+                        <include>**/*FunctionalTests.java</include>
+                        <include>**/*IntegrationTests.java</include>
+                        <include>**/*PerformanceTests.java</include>
+                    </excludes>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.0.0-M3</version>
+                <version>${maven.failsafe.plugin.version}</version>
                 <configuration>
                     <classesDirectory>${project.build.outputDirectory}</classesDirectory>
                     <includes>
@@ -152,7 +164,7 @@
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.6.0.1398</version>
+                <version>${maven.sonar.plugin.version}</version>
             </plugin>
         </plugins>
     </build>
@@ -162,7 +174,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.1</version>
+                <version>${maven.pmd.plugin.version}</version>
                 <configuration>
                     <targetJdk>${java.version}</targetJdk>
                 </configuration>
@@ -170,12 +182,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>${maven.javadoc.plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>3.0.0-M3</version>
+                <version>${maven.surefire.report.plugin.version}</version>
             </plugin>
         </plugins>
     </reporting>
