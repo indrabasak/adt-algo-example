@@ -25,6 +25,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <sl4j.version>1.7.28</sl4j.version>
+        <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
     </properties>
 
     <dependencies>
