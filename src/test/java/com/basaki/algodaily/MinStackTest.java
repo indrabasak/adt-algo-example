@@ -1,6 +1,5 @@
-package com.basaki.codility.algodaily;
+package com.basaki.algodaily;
 
-import com.basaki.algodaily.MinStack;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

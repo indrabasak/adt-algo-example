@@ -2,8 +2,6 @@ package com.basaki.algodaily;
 
 import java.util.Stack;
 
-import static org.junit.Assert.assertEquals;
-
 /**
  * Recall that a stack is an abstract data type modeling a collection elements.
  * Its primary operations are push (which adds an element to the top of
@@ -68,26 +66,5 @@ public class MinStack {
     private static class Plate {
         private int val;
         private int min;
-    }
-
-    public static void main(String... args) {
-        MinStack minstack = new MinStack();
-        minstack.push(4);
-        minstack.push(7);
-        minstack.push(3);
-        minstack.push(2);
-        minstack.push(6);
-        int min1 = minstack.min();
-        minstack.pop();
-        int min2 = minstack.min();
-        minstack.pop();
-        int min3 = minstack.min();
-        minstack.pop();
-        int min4 = minstack.min();
-        minstack.pop();
-        assertEquals(min1, 2);
-        assertEquals(min2, 2);
-        assertEquals(min3, 3);
-        assertEquals(min4, 4);
     }
 }
