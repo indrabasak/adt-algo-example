@@ -1,13 +1,13 @@
 package com.basaki.codility.lesson.five;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class GenomicRangeQueryTest {
+class GenomicRangeQueryTest {
 
     @Test
-    public void testSolution() {
+    void testSolution() {
         GenomicRangeQuery soln = new GenomicRangeQuery();
 
         assertArrayEquals(new int[]{2, 4, 1},
@@ -18,7 +18,7 @@ public class GenomicRangeQueryTest {
     }
 
     @Test
-    public void testSolutionOne() {
+    void testSolutionOne() {
         GenomicRangeQuery soln = new GenomicRangeQuery();
 
         assertArrayEquals(new int[]{2, 4, 1},

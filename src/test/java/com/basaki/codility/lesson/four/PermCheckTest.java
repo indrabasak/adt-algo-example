@@ -1,13 +1,13 @@
 package com.basaki.codility.lesson.four;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PermCheckTest {
+class PermCheckTest {
 
     @Test
-    public void testSolution() {
+    void testSolution() {
         PermCheck soln = new PermCheck();
         assertEquals(1, soln.solution(new int[] {4, 1, 3, 2}));
         assertEquals(0, soln.solution(new int[] {4, 1, 3}));

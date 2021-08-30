@@ -1,13 +1,13 @@
 package com.basaki.codility.lesson.four;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MissingIntegerTest {
+class MissingIntegerTest {
 
     @Test
-    public void testSolution() {
+    void testSolution() {
         MissingInteger soln = new MissingInteger();
 
         assertEquals(5, soln.solution(new int[] {1, 3, 6, 4, 1, 2}));

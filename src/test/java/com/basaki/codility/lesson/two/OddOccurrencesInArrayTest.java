@@ -1,13 +1,14 @@
 package com.basaki.codility.lesson.two;
 
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
 
-public class OddOccurrencesInArrayTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class OddOccurrencesInArrayTest {
 
     @Test
-    public void testSolution() {
+    void testSolution() {
         OddOccurrencesInArray soln = new OddOccurrencesInArray();
 
         int[] A = {9, 3, 9, 3, 9, 7, 9};

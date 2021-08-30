@@ -29,7 +29,7 @@ public class BinaryTreeInorderTraversal {
     }
 
     public static List<Integer> inorderTraversal(Node root) {
-        List<Integer> list = new ArrayList<Integer>();
+        List<Integer> list = new ArrayList<>();
         if (root == null) {
             return list;
         }

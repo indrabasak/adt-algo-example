@@ -1,13 +1,13 @@
 package com.basaki.codility.lesson.three;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FrogJmpTest {
+class FrogJmpTest {
 
     @Test
-    public void testSolution() {
+    void testSolution() {
         FrogJmp soln = new FrogJmp();
         assertEquals(0, soln.solution(10, 5, 30));
         assertEquals(0, soln.solution(10, 10, 30));

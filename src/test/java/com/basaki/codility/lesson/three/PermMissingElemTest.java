@@ -1,13 +1,13 @@
 package com.basaki.codility.lesson.three;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PermMissingElemTest {
+class PermMissingElemTest {
 
     @Test
-    public void testSolution() {
+    void testSolution() {
        PermMissingElem soln = new PermMissingElem();
         assertEquals(1, soln.solution(null));
         assertEquals(1, soln.solution(new int[]{2}));

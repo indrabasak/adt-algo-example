@@ -1,14 +1,15 @@
 package com.basaki.algodaily;
 
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import org.junit.jupiter.api.Test;
 
-public class HashmapTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+class HashmapTest {
 
     @Test
-    public void getMissingTest() {
+    void getMissingTest() {
         Hashmap dict = new Hashmap();
         dict.set("jess", "213-559-6840");
         dict.set("james", "123-456-7890");
@@ -16,11 +17,10 @@ public class HashmapTest {
     }
 
     @Test
-    public void getContainedTest() {
+    void getContainedTest() {
         Hashmap dict = new Hashmap();
         dict.set("james", "123-456-7890");
         dict.set("jess", "213-559-6840");
         assertEquals(dict.get("james"), "123-456-7890");
     }
-
 }

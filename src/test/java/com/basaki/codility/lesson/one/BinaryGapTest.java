@@ -1,13 +1,13 @@
 package com.basaki.codility.lesson.one;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BinaryGapTest {
+class BinaryGapTest {
 
     @Test
-    public void testSolution() {
+    void testSolution() {
         BinaryGap solution = new BinaryGap();
 
         int binaryGap = solution.solution(9);

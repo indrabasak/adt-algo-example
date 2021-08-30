@@ -1,15 +1,14 @@
 package com.basaki.codility.lesson.five;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PassingCarsTest {
+class PassingCarsTest {
 
     @Test
-    public void testSolution() {
+    void testSolution() {
         PassingCars soln = new PassingCars();
-
         assertEquals(5, soln.solution(new int[] {0, 1, 0, 1, 1}));
     }
 }

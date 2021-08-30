@@ -1,13 +1,13 @@
 package com.basaki.algodaily;
 
 import java.util.Arrays;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static com.basaki.algodaily.BinaryTreeInorderTraversal.inorderTraversal;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
-public class BinaryTreeInorderTraversalTest {
+class BinaryTreeInorderTraversalTest {
 
     private BinaryTreeInorderTraversal.Node tree1;
     private BinaryTreeInorderTraversal.Node tree2;
@@ -27,8 +27,8 @@ public class BinaryTreeInorderTraversalTest {
         return a == null && b == null;
     }
 
-    @Before
-    public void setUp() {
+    @BeforeEach
+    void setUp() {
         // Regular binary trees
         tree1 = new BinaryTreeInorderTraversal.Node(4);
         tree1.left = new BinaryTreeInorderTraversal.Node(1);
@@ -58,11 +58,12 @@ public class BinaryTreeInorderTraversalTest {
     }
 
     @Test
-    public void tinyTreeInorderTraversalTest() {
+    void tinyTreeInorderTraversalTest() {
         assertIterableEquals(inorderTraversal(tree3), Arrays.asList(3, 6));
     }
 
-    public void mediumSizedTreeInorderTraversalTest() {
+    @Test
+    void mediumSizedTreeInorderTraversalTest() {
         assertIterableEquals(inorderTraversal(tree2), Arrays.asList(17, 10, 3, 5, 8));
     }
 }

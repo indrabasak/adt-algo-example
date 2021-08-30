@@ -1,9 +1,7 @@
 package com.basaki.algodaily;
 
-import org.junit.Test;
 
 import static com.basaki.algodaily.Calculator.calculator;
-import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
 
