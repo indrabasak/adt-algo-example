@@ -25,6 +25,11 @@ public class P10_1_SortedMerge {
     }
 
     public static void main(String... args) {
+        char xx = 'b';
+        int y = xx;
+        System.out.println("*** " + y);
+        char yy = (char) y;
+        System.out.println("*** " + yy);
         int[] a = new int[7];
         a[0] = 20;
         a[1] = 31;
