@@ -64,10 +64,10 @@ public class ReverseLinkedList {
         Node prev = null;
         Node current = head;
         Node next = null;
-
-        while (current != null) {
-            prev = current.next;
-        }
+//
+//        while (current != null) {
+//            prev = current.next;
+//        }
 
         while (current != null) {
             next = current.next;

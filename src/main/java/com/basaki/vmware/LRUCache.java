@@ -1,8 +1,10 @@
 package com.basaki.vmware;
 
+import java.util.ArrayList;
 import java.util.Deque;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -57,6 +59,13 @@ public class LRUCache {
         }
 
         System.out.println(bldr.toString());
+    }
+
+    public int[] print() {
+        List<Integer> values = new ArrayList<>();
+        values.addAll(cache);
+
+        return values.stream().mapToInt(i->i).toArray();
     }
 
     public static void main(String... args) {
